@@ -16,7 +16,7 @@
  *  limitations under the License.
  */
 
-#include "lib/lmo.h"
+#include "template_lmo.h"
 
 static void die(const char *msg)
 {
