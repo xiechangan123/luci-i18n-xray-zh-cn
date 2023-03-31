@@ -1,7 +1,7 @@
 /*
  * lmo - Lua Machine Objects - Base functions
  *
- *   Copyright (C) 2009-2010 Jo-Philipp Wich <jow@openwrt.org>
+ *   Copyright (C) 2009-2010 Jo-Philipp Wich <xm@subsignal.org>
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -23,9 +23,9 @@
  * Copyright (C) 2004-2008 by Paul Hsieh
  */
 
-uint32_t sfh_hash(const char *data, size_t len, uint32_t init)
+uint32_t sfh_hash(const char *data, int len)
 {
-	uint32_t hash = init, tmp;
+	uint32_t hash = len, tmp;
 	int rem;
 
 	if (len <= 0 || data == NULL) return 0;
@@ -46,14 +46,14 @@ uint32_t sfh_hash(const char *data, size_t len, uint32_t init)
 	switch (rem) {
 		case 3: hash += sfh_get16(data);
 			hash ^= hash << 16;
-			hash ^= (signed char)data[sizeof(uint16_t)] << 18;
+			hash ^= data[sizeof(uint16_t)] << 18;
 			hash += hash >> 11;
 			break;
 		case 2: hash += sfh_get16(data);
 			hash ^= hash << 11;
 			hash += hash >> 17;
 			break;
-		case 1: hash += (signed char)*data;
+		case 1: hash += *data;
 			hash ^= hash << 10;
 			hash += hash >> 1;
 	}
@@ -69,51 +69,17 @@ uint32_t sfh_hash(const char *data, size_t len, uint32_t init)
 	return hash;
 }
 
-uint32_t lmo_canon_hash(const char *str, int len,
-                        const char *ctx, int ctxlen, int plural)
+uint32_t lmo_canon_hash(const char *str, int len)
 {
 	char res[4096];
-	char *ptr, *end, prev;
+	char *ptr, prev;
 	int off;
 
-	if (!str)
+	if (!str || len >= sizeof(res))
 		return 0;
 
-	ptr = res;
-	end = res + sizeof(res);
-
-	if (ctx)
+	for (prev = ' ', ptr = res, off = 0; off < len; prev = *str, off++, str++)
 	{
-		for (prev = ' ', off = 0; off < ctxlen; prev = *ctx, off++, ctx++)
-		{
-			if (ptr >= end)
-				return 0;
-
-			if (isspace(*ctx))
-			{
-				if (!isspace(prev))
-					*ptr++ = ' ';
-			}
-			else
-			{
-				*ptr++ = *ctx;
-			}
-		}
-
-		if ((ptr > res) && isspace(*(ptr-1)))
-			ptr--;
-
-		if (ptr >= end)
-			return 0;
-
-		*ptr++ = '\1';
-	}
-
-	for (prev = ' ', off = 0; off < len; prev = *str, off++, str++)
-	{
-		if (ptr >= end)
-			return 0;
-
 		if (isspace(*str))
 		{
 			if (!isspace(prev))
@@ -128,15 +94,7 @@ uint32_t lmo_canon_hash(const char *str, int len,
 	if ((ptr > res) && isspace(*(ptr-1)))
 		ptr--;
 
-	if (plural > -1)
-	{
-		if (plural >= 100 || ptr + 3 >= end)
-			return 0;
-
-		ptr += snprintf(ptr, 3, "\2%d", plural);
-	}
-
-	return sfh_hash(res, ptr - res, ptr - res);
+	return sfh_hash(res, ptr - res);
 }
 
 lmo_archive_t * lmo_open(const char *file)
@@ -258,7 +216,7 @@ int lmo_load_catalog(const char *lang, const char *dir)
 	if (!_lmo_active_catalog)
 		_lmo_active_catalog = cat;
 
-	return cat->archives ? 0 : -1;
+	return 0;
 
 err:
 	if (dh) closedir(dh);
@@ -319,193 +277,7 @@ static lmo_entry_t * lmo_find_entry(lmo_archive_t *ar, uint32_t hash)
 	return NULL;
 }
 
-void *pluralParseAlloc(void *(*)(size_t));
-void pluralParse(void *, int, int, void *);
-void pluralParseFree(void *, void (*)(void *));
-
-static int lmo_eval_plural(const char *expr, int len, int val)
-{
-	struct { int num; int res; } s = { .num = val, .res = -1 };
-	const char *p = NULL;
-	void *pParser = NULL;
-	int t, n;
-	char c;
-
-	while (len > 7) {
-		if (*expr == 'p') {
-			if (!strncmp(expr, "plural=", 7)) {
-				p = expr + 7;
-				len -= 7;
-				break;
-			}
-		}
-
-		expr++;
-		len--;
-	}
-
-	if (!p)
-		goto out;
-
-	pParser = pluralParseAlloc(malloc);
-
-	if (!pParser)
-		goto out;
-
-	while (len-- > 0) {
-		c = *p++;
-		t = -1;
-		n = 0;
-
-		switch (c) {
-		case ' ':
-		case '\t':
-			continue;
-
-		case '0': case '1': case '2': case '3': case '4':
-		case '5': case '6': case '7': case '8': case '9':
-			t = T_NUM;
-			n = c - '0';
-
-			while (*p >= '0' && *p <= '9') {
-				n *= 10;
-				n += *p - '0';
-				p++;
-			}
-
-			break;
-
-		case '=':
-			if (*p == '=') {
-				t = T_EQ;
-				p++;
-			}
-
-			break;
-
-		case '!':
-			if (*p == '=') {
-				t = T_NE;
-				p++;
-			}
-			else {
-				t = T_NOT;
-			}
-
-			break;
-
-		case '&':
-			if (*p == '&') {
-				t = T_AND;
-				p++;
-			}
-
-			break;
-
-		case '|':
-			if (*p == '|') {
-				t = T_OR;
-				p++;
-			}
-
-			break;
-
-		case '<':
-			if (*p == '=') {
-				t = T_LE;
-				p++;
-			}
-			else {
-				t = T_LT;
-			}
-
-			break;
-
-		case '>':
-			if (*p == '=') {
-				t = T_GE;
-				p++;
-			}
-			else {
-				t = T_GT;
-			}
-
-			break;
-
-		case '*':
-			t = T_MUL;
-			break;
-
-		case '/':
-			t = T_DIV;
-			break;
-
-		case '%':
-			t = T_MOD;
-			break;
-
-		case '+':
-			t = T_ADD;
-			break;
-
-		case '-':
-			t = T_SUB;
-			break;
-
-		case 'n':
-			t = T_N;
-			break;
-
-		case '?':
-			t = T_QMARK;
-			break;
-
-		case ':':
-			t = T_COLON;
-			break;
-
-		case '(':
-			t = T_LPAREN;
-			break;
-
-		case ')':
-			t = T_RPAREN;
-			break;
-
-		case ';':
-		case '\n':
-		case '\0':
-			t = 0;
-			break;
-		}
-
-		/* syntax error */
-		if (t < 0)
-			goto out;
-
-		pluralParse(pParser, t, n, &s);
-
-		/* eof */
-		if (t == 0)
-			break;
-	}
-
-	pluralParse(pParser, 0, 0, &s);
-
-out:
-	pluralParseFree(pParser, free);
-
-	return s.res;
-}
-
 int lmo_translate(const char *key, int keylen, char **out, int *outlen)
-{
-	return lmo_translate_ctxt(key, keylen, NULL, 0, out, outlen);
-}
-
-int lmo_translate_ctxt(const char *key, int keylen,
-                       const char *ctx, int ctxlen,
-                       char **out, int *outlen)
 {
 	uint32_t hash;
 	lmo_entry_t *e;
@@ -514,61 +286,7 @@ int lmo_translate_ctxt(const char *key, int keylen,
 	if (!key || !_lmo_active_catalog)
 		return -2;
 
-	hash = lmo_canon_hash(key, keylen, ctx, ctxlen, -1);
-
-	if (hash > 0)
-	{
-		for (ar = _lmo_active_catalog->archives; ar; ar = ar->next)
-		{
-			if ((e = lmo_find_entry(ar, hash)) != NULL)
-			{
-				*out = ar->mmap + ntohl(e->offset);
-				*outlen = ntohl(e->length);
-				return 0;
-			}
-		}
-	}
-
-	return -1;
-}
-
-int lmo_translate_plural(int n, const char *skey, int skeylen,
-                                const char *pkey, int pkeylen,
-                                char **out, int *outlen)
-{
-	return lmo_translate_plural_ctxt(n, skey, skeylen, pkey, pkeylen,
-	                                 NULL, 0, out, outlen);
-}
-
-int lmo_translate_plural_ctxt(int n, const char *skey, int skeylen,
-                                     const char *pkey, int pkeylen,
-                                     const char *ctx, int ctxlen,
-                                     char **out, int *outlen)
-{
-	int pid = -1;
-	uint32_t hash;
-	lmo_entry_t *e;
-	lmo_archive_t *ar;
-
-	if (!skey || !pkey || !_lmo_active_catalog)
-		return -2;
-
-	for (ar = _lmo_active_catalog->archives; ar; ar = ar->next) {
-		e = lmo_find_entry(ar, 0);
-
-		if (e != NULL) {
-			pid = lmo_eval_plural(ar->mmap + ntohl(e->offset), ntohl(e->length), n);
-			break;
-		}
-	}
-
-	if (pid == -1)
-		pid = (n != 1);
-
-	hash = lmo_canon_hash(skey, skeylen, ctx, ctxlen, pid);
-
-	if (hash == 0)
-		return -1;
+	hash = lmo_canon_hash(key, keylen);
 
 	for (ar = _lmo_active_catalog->archives; ar; ar = ar->next)
 	{
@@ -580,32 +298,7 @@ int lmo_translate_plural_ctxt(int n, const char *skey, int skeylen,
 		}
 	}
 
-	if (n != 1)
-	{
-		*out = (char *)pkey;
-		*outlen = pkeylen;
-	}
-	else
-	{
-		*out = (char *)skey;
-		*outlen = skeylen;
-	}
-
-	return 0;
-}
-
-void lmo_iterate(lmo_iterate_cb_t cb, void *priv)
-{
-	unsigned int i;
-	lmo_entry_t *e;
-	lmo_archive_t *ar;
-
-	if (!_lmo_active_catalog)
-		return;
-
-	for (ar = _lmo_active_catalog->archives; ar; ar = ar->next)
-		for (i = 0, e = &ar->index[0]; i < ar->length; e = &ar->index[++i])
-			cb(ntohl(e->key_id), ar->mmap + ntohl(e->offset), ntohl(e->length), priv);
+	return -1;
 }
 
 void lmo_close_catalog(const char *lang)
