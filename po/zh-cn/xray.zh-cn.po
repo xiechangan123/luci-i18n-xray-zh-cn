@@ -49,12 +49,12 @@ msgid "Enable Xray API Service"
 msgstr "启用Xray API服务"
 
 msgid ""
-"Xray API Service uses port 8080 and GRPC protocol. See <a href=\"https:"
-"//xtls.github.io/document/command.html#xray-api\">here</a> for help."
+"Xray API Service uses port 8080 and GRPC protocol. Also callable via <code>"
+"xray api</code> or <code>ubus call xray</code>. See <a href="https://xtls.github"
+".io/document/command.html#xray-api">here</a> for help."
 msgstr ""
 "使用8080端口和GRPC协议的Xray API服务。"
-"参阅<a href=\"https://xtls.github.io/document/command.html#xray-api\">此处</a>"
-"获取帮助。"
+"参阅<a href="https://xtls.github.io/document/command.html#xray-api">此处</a>获取帮助。"
 
 msgid "Server List"
 msgstr "服务器列表"
@@ -182,7 +182,7 @@ msgid ""
 "value may help reduce the possibility of temporary DNS lookup failures."
 msgstr ""
 "在多个端口上侦听DNS请求（所有端口都用作dnsmasq上游服务器）。"
-"</br>例如Xray DNS服务器端口为5300并使用3个额外端口，则5300--5303将用于DNS请求。"
+"</br>例如Xray DNS服务器端口为5300并使用3个额外端口，则5300-5303将用于DNS请求。"
 "</br>添加额外端口可能有助于减少临时DNS查找失败的可能性。"
 
 msgid "Socket Mark Number"
@@ -216,7 +216,7 @@ msgid "DNS for resolving outbound domains and following bypassed domains"
 msgstr "用于解析出站域名和绕过域名。"
 
 msgid "Bypassed domain rules"
-msgstr "绕过域名规则。"
+msgstr "绕过域名规则"
 
 msgid ""
 "Specify rules like <code>geosite:cn</code> or <code>domain:bilibili."
@@ -277,19 +277,27 @@ msgstr ""
 msgid "Default DNS"
 msgstr "默认DNS"
 
-msgid "DNS for resolving other sites (and Dokodemo outbound)"
-msgstr "用于解析其他网站。"
+msgid "DNS for resolving other sites (not in the rules above) and DNS records other than A or AAAA (TXT and MX for example)"
+msgstr "用于解析其他站点的DNS（不在上述规则中）和A或AAAA以外的DNS记录（例如TXT和MX）。"
+
+msgid "Blocked domain rules"
+msgstr "阻止域名规则"
+
+msgid ""
+"Specify rules like <code>geosite:category-ads</code> or <code>domain:baidu.com"
+"</code>. See <a href="https://xtls.github.io/config/dns.html#dnsobject">documentation</a> for details."
+msgstr ""
+"指定例如<code>geosite:category-ads</code>或<code>domain:baidu.com</code>。"
+"参阅<a href="https://xtls.github.io/config/dns.html#dnsobject">此处</a>获取帮助。"
 
 msgid "Transparent Proxy Rules"
 msgstr "透明代理规则"
 
-msgid "GeoIP Direct Code"
-msgstr "GeoIP直连代码"
+msgid "GeoIP Direct Code List"
+msgstr "GeoIP直连域名列表"
 
-msgid ""
-"Hosts in this GeoIP set will not be forwarded through Xray. Set to "
-"unspecified to forward all non-private hosts."
-msgstr "此GeoIP集中的主机将不会通过Xray转发。设置为未指定以转发所有非私有主机。"
+msgid "Hosts in these GeoIP sets will not be forwarded through Xray. Remove all items to forward all non-private hosts."
+msgstr "此GeoIP集中的域名将不会通过Xray转发。设置为未指定以转发所有非私有域名。"
 
 msgid ""
 "Resource file /usr/share/xray/geoip.dat not exist. All network traffic will "
@@ -458,6 +466,24 @@ msgstr "启用DNS日志"
 
 msgid "DNS log will also be written to System Log."
 msgstr "DNS查询日志将被记录在系统日志中。"
+
+msgid "Enable Statistics"
+msgstr "启用统计信息"
+
+msgid "Enable statistics of inbounds / outbounds data. Use Xray API to query values."
+msgstr "启用入站/出站数据的统计信息。使用Xray API查询数据。"
+
+msgid "Enable Observatory"
+msgstr "启用延迟统计"
+
+msgid "Enable latency measurement for TCP and UDP outbounds. Support for balancers and strategy will be added later."
+msgstr "为TCP和UDP出站启用延迟统计。稍后将添加对平衡模式和策略的支持。"
+
+msgid "Enable Xray Metrics Server"
+msgstr "启用Xray指标服务"
+
+msgid "Enable built-in metrics server for pprof and expvar. See <a href='https://github.com/XTLS/Xray-core/pull/1000'>here</a> for details."
+msgstr "为pprof和expvar启用内置指标服务。有关详细信息，请参阅<a href='https：//github.com/XTLS/Xray-core/pull/1000'>此处</a>获取帮助。"
 
 msgid "Handshake Timeout"
 msgstr "握手超时"
