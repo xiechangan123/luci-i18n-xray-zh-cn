@@ -278,6 +278,9 @@ msgstr "目的端口"
 msgid "Force Forward"
 msgstr "强制转发"
 
+msgid "This destination must be forwarded through an outbound server."
+msgstr "此目标必须通过出站服务器转发。"
+
 msgid "HTTPS Server"
 msgstr "HTTPS服务器"
 
