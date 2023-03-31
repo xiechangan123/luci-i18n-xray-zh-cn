@@ -1,10 +1,10 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-i18n-xray-zh-cn
-PKG_VERSION:=1.0
-PKG_RELEASE:=2
-PKG_DATE:=20211219
-PKG_MAINTAINER:=mitsuhaxy <i@mengxy.me>
+PKG_VERSION:=2.0
+PKG_RELEASE:=1
+PKG_DATE:=20230401
+PKG_MAINTAINER:=xiechangan123
 PKG_LICENSE:=GPL-3.0
 
 include $(INCLUDE_DIR)/package.mk
