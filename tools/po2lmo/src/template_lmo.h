@@ -1,7 +1,7 @@
 /*
  * lmo - Lua Machine Objects - General header
  *
- *   Copyright (C) 2009-2012 Jo-Philipp Wich <jow@openwrt.org>
+ *   Copyright (C) 2009-2012 Jo-Philipp Wich <xm@subsignal.org>
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -41,10 +41,6 @@
 					   +(uint32_t)(((const uint8_t *)(d))[0]) )
 #endif
 
-#ifndef __hidden
-#define __hidden __attribute__((visibility("hidden")))
-#endif
-
 
 struct lmo_entry {
 	uint32_t key_id;
@@ -77,32 +73,20 @@ struct lmo_catalog {
 
 typedef struct lmo_catalog lmo_catalog_t;
 
-typedef void (*lmo_iterate_cb_t)(uint32_t, const char *, int, void *);
 
-__hidden uint32_t sfh_hash(const char *data, size_t len, uint32_t init);
-__hidden uint32_t lmo_canon_hash(const char *data, int len,
-                                 const char *ctx, int ctxlen, int plural);
+uint32_t sfh_hash(const char *data, int len);
+uint32_t lmo_canon_hash(const char *data, int len);
 
-__hidden lmo_archive_t * lmo_open(const char *file);
-__hidden void lmo_close(lmo_archive_t *ar);
+lmo_archive_t * lmo_open(const char *file);
+void lmo_close(lmo_archive_t *ar);
 
 
-__hidden extern lmo_catalog_t *_lmo_catalogs;
-__hidden extern lmo_catalog_t *_lmo_active_catalog;
+extern lmo_catalog_t *_lmo_catalogs;
+extern lmo_catalog_t *_lmo_active_catalog;
 
-__hidden int lmo_load_catalog(const char *lang, const char *dir);
-__hidden int lmo_change_catalog(const char *lang);
-__hidden int lmo_translate(const char *key, int keylen, char **out, int *outlen);
-__hidden int lmo_translate_ctxt(const char *key, int keylen,
-                                const char *ctx, int ctxlen, char **out, int *outlen);
-__hidden int lmo_translate_plural(int n, const char *skey, int skeylen,
-                                  const char *pkey, int pkeylen,
-                                  char **out, int *outlen);
-__hidden int lmo_translate_plural_ctxt(int n, const char *skey, int skeylen,
-                                       const char *pkey, int pkeylen,
-                                       const char *ctx, int ctxlen,
-                                     char **out, int *outlen);
-__hidden void lmo_iterate(lmo_iterate_cb_t cb, void *priv);
-__hidden void lmo_close_catalog(const char *lang);
+int lmo_load_catalog(const char *lang, const char *dir);
+int lmo_change_catalog(const char *lang);
+int lmo_translate(const char *key, int keylen, char **out, int *outlen);
+void lmo_close_catalog(const char *lang);
 
 #endif
