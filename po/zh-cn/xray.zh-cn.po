@@ -82,6 +82,9 @@ msgstr "别名（可选）"
 msgid "Server Hostname"
 msgstr "服务器"
 
+msgid "Domain Strategy"
+msgstr "域名策略"
+
 msgid "Server Port"
 msgstr "端口"
 
@@ -89,12 +92,12 @@ msgid "UserId / Password"
 msgstr "UID/密码"
 
 msgid ""
-"Fill user_id for vmess / vless, or password for shadowsocks / trojan (also "
-"supports <a href=\"https://github.com/XTLS/Xray-core/issues/158\">Xray UUID "
+"Fill user_id for vmess / VLESS, or password for shadowsocks / trojan (also "
+"supports <a href="https://github.com/XTLS/Xray-core/issues/158">Xray UUID "
 "Mapping</a>)"
 msgstr ""
 "vmess/vless使用UID，shadowsocks/trojan使用密码"
-"(支持<a href=\"https://github.com/XTLS/Xray-core/issues/158\">Xray UUID</a>映射)。"
+"(支持<a href="https://github.com/XTLS/Xray-core/issues/158">Xray UUID映射</a>)。"
 
 msgid "Protocol Settings"
 msgstr "协议设置"
@@ -116,6 +119,23 @@ msgstr "传输方式"
 
 msgid "Fake Header Type"
 msgstr "伪装报文类型"
+
+msgid "Dialer Proxy"
+msgstr "拨号代理"
+
+msgid "Similar to <a href="https://xtls.github.io/config/outbound.html#proxysettingsobject">ProxySettings.Tag</a>"
+msgstr "类似于<a href="https://xtls.github.io/config/outbound.html#proxysettingsobject">出站代理配置</a>"
+
+msgid ""
+"Configurations here override settings in the previous tabs with the following rules: "
+"<ol><li>Object values will be replaced recursively so settings in previous tabs matters.</li>"
+"<li>Arrays will be replaced entirely instead of being merged.</li>"
+"<li>Tag <code>tag</code> is ignored. </li></ol>Override rules here may be changed later. Use this only for experimental or pre-release features."
+msgstr ""
+"自定义配置使用以下规则覆盖先前选项卡中的设置："
+"<ol><li>对象值将以递归方式替换，因此先前选项卡中的设置很重要。</li>"
+"<li>数组将被完全替换，而不是被合并。</li>"
+"<li>标签 <code>tag</code> 被忽略. </li></ol>覆盖规则可能会更改。仅将其用于实验性或预发布功能。"
 
 msgid "Host"
 msgstr "主机名"
@@ -184,13 +204,13 @@ msgid "Skip Proxy for uids"
 msgstr "跳过uid代理"
 
 msgid "Processes started by users with these uids won't be forwarded through Xray."
-msgstr "使用这些uid（单用户标示）启动的进程不会通过Xray转发"
+msgstr "使用这些uid（用户ID）启动的进程不会通过Xray转发"
 
 msgid "Skip Proxy for gids"
 msgstr "跳过gid的代理"
 
 msgid "Processes started by users in groups with these gids won't be forwarded through Xray."
-msgstr "使用这些gid（组用户标示）启动的进程不会通过Xray转发。"
+msgstr "使用这些gid（组ID）启动的进程不会通过Xray转发。"
 
 msgid "Xray DNS Server Port"
 msgstr "DNS端口"
@@ -398,6 +418,9 @@ msgid ""
 "This will start a HTTPS server which serves both as an inbound for Xray and a reverse proxy web server."
 msgstr "这将启动一个HTTPS服务器，该服务器既用作Xray的入站服务器，又用作反向代理Web服务器。"
 
+msgid "Xray HTTPS Server Port"
+msgstr "Xray HTTPS服务端口"
+
 msgid "Certificate File"
 msgstr "证书"
 
@@ -554,7 +577,7 @@ msgstr ""
 "此处</a>获取帮助。"
 
 msgid "Upstream"
-msgstr "上游"
+msgstr "上游服务器"
 
 msgid "Redirect address"
 msgstr "扩展选项"
