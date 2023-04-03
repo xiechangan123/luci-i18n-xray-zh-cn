@@ -334,7 +334,7 @@ msgstr "阻止域名规则"
 
 msgid "Specify rules like <code>geosite:category-ads</code> or <code>domain:baidu.com</code>. See <a href="https://xtls.github.io/config/dns.html#dnsobject">documentation</a> for details."
 msgstr ""
-"指定例如<code>geosite:category-ads</code>或<code>domain:baidu.com</code>。"
+"指定例如<code>geosite:category-ads</code>或<code>domain:baidu.com</code>"
 "等规则。"
 "参阅<a href="https://xtls.github.io/config/dns.html#dnsobject">此处</a>获取帮助。"
 
@@ -550,7 +550,7 @@ msgid "Enable Xray Metrics Server"
 msgstr "启用Xray指标服务"
 
 msgid "Enable built-in metrics server for pprof and expvar. See <a href='https://github.com/XTLS/Xray-core/pull/1000'>here</a> for details."
-msgstr "为pprof和expvar启用内置指标服务。有关详细信息，参阅<a href='https：//github.com/XTLS/Xray-core/pull/1000'>此处</a>获取帮助。"
+msgstr "为pprof和expvar启用内置指标服务。有关详细信息，参阅<a href='https://github.com/XTLS/Xray-core/pull/1000'>此处</a>获取帮助。"
 
 msgid "Handshake Timeout"
 msgstr "握手超时"
