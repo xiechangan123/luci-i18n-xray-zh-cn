@@ -60,6 +60,7 @@ msgid ""
 ".io/document/command.html#xray-api">here</a> for help."
 msgstr ""
 "使用8080端口和GRPC协议的Xray API服务。"
+"也可通过<code>xray api</code>或<code>ubus call xray</code>调用。"
 "参阅<a href="https://xtls.github.io/document/command.html#xray-api">此处</a>"
 "获取帮助。"
 
