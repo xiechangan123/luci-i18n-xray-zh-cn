@@ -35,7 +35,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build ipk
-        uses: ttimasdf/gh-action-openwrt-build-package@master
+        uses: openwrt/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.version }}
 
