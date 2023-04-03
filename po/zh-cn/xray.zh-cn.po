@@ -180,6 +180,18 @@ msgstr "Socks5代理端口"
 msgid "HTTP Proxy Port"
 msgstr "HTTP代理端口"
 
+msgid "Skip Proxy for uids"
+msgstr "跳过uid代理"
+
+msgid "Processes started by users with these uids won't be forwarded through Xray."
+msgstr "使用这些uid（单用户标示）启动的进程不会通过Xray转发"
+
+msgid "Skip Proxy for gids"
+msgstr "跳过gid的代理"
+
+msgid "Processes started by users in groups with these gids won't be forwarded through Xray."
+msgstr "使用这些gid（组用户标示）启动的进程不会通过Xray转发。"
+
 msgid "Xray DNS Server Port"
 msgstr "DNS端口"
 
@@ -454,11 +466,11 @@ msgstr "[与主服务相同]"
 
 msgid ""
 "WARNING: at least one of asset files (geoip.dat, geosite.dat) is not found "
-"under /usr/share/xray. Xray may not work properly. See <a href=\"https:"
-"//github.com/yichya/luci-app-xray\">here</a> for help."
+"under /usr/share/xray. Xray may not work properly. See <a href="https:"
+"//github.com/yichya/luci-app-xray">here</a> for help."
 msgstr ""
-"资源检查：至少一个资源文件geoip.dat, geosite.dat不存在，"
-"Xray可能不会正常工作。<a href=\"https://github.com/yichya/luci-app-xray\">此处</a>报告问题或提出请求。"
+"警告：/usr/share/xray目录下至少一个资源文件（geoip.dat, geosite.dat）不存在。"
+"Xray可能无法正常工作。参阅<a href="https://github.com/yichya/luci-app-xray">此处</a>报告问题或提出请求。"
 
 msgid "Asset files check: geoip.dat:"
 msgstr "资源检查：geoip："
@@ -466,8 +478,8 @@ msgstr "资源检查：geoip："
 msgid "MB; geosite.dat:"
 msgstr "MB，geosite："
 
-msgid "MB. Report issues or request for features <a href=\"https://github.com/yichya/luci-app-xray\">here</a>."
-msgstr "MB。<a href=\"https://github.com/yichya/luci-app-xray\">在此处</a>报告问题或提出请求。"
+msgid "Report issues or request for features <a href="https://github.com/yichya/luci-app-xray">here</a>."
+msgstr "<a href="https://github.com/yichya/luci-app-xray">此处</a>报告问题或提出请求。"
 
 msgid "Log Level"
 msgstr "日志等级"
