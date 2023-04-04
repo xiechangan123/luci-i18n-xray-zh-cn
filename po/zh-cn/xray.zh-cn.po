@@ -592,7 +592,10 @@ msgstr "策略：每个连接的缓存大小，参阅<a href=\"https://xtls.gith
 msgid "Bridge"
 msgstr "桥接"
 
-msgid "Reverse proxy tool. Currently only client role (bridge) is supported. See <a href="https://xtls.github.io/config/reverse.html#bridgeobject">here</a> for help."
+msgid ""
+"Reverse proxy tool. Currently only client role (bridge) is supported. "
+"See <a href="https://xtls.github.io/config/reverse.html#bridgeobject">"
+"here</a> for help."
 msgstr ""
 "反向代理工具。目前仅支持客户端（桥接）。参"
 "阅<a href="https://xtls.github.io/config/reverse.html#bridgeobject">"
