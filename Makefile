@@ -14,7 +14,7 @@ define Package/$(PKG_NAME)
   SUBMENU:=Luci
   TITLE:=luci-i18n-xray-zh-cn
   PKGARCH:=all
-  DEPENDS:=+luci-app-xray
+  DEPENDS:=+luci-app-xray-fw4
 endef
 
 define Package/$(PKG_NAME)/description
