@@ -389,10 +389,7 @@ msgstr "Xray HTTPS服务端口"
 msgid "This port needs to be set <code>accept input</code> manually in firewall settings."
 msgstr "此端口需要在系统防火墙<code>accept input</code>中手动设置。"
 
-msgid "[${protocol_name}][tls] Certificate File"
-msgstr "证书"
-
-msgid "[${protocol_name}][xtls] Certificate File"
+msgid "Certificate File"
 msgstr "证书"
 
 msgid "Private Key File"
@@ -435,7 +432,7 @@ msgid "https://github.com/yichya/luci-app-xray"
 msgstr "https://github.com/yichya/luci-app-xray"
 
 msgid "Stream Security"
-msgstr "传输安全"
+msgstr "传输层安全"
 
 msgid "Server Name"
 msgstr "服务器名"
