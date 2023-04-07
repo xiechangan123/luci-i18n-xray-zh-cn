@@ -374,11 +374,6 @@ msgstr "强制转发"
 msgid "This destination must be forwarded through an outbound server."
 msgstr "此目标必须通过出站服务器转发。"
 
-msgid ""
-"This destination must be forwarded through Xray. (This option might be "
-"removed later.)"
-msgstr "目的地址将被Xray转发（这个选项稍后可能会被移除）。"
-
 msgid "HTTPS Server"
 msgstr "HTTPS服务器"
 
@@ -394,7 +389,10 @@ msgstr "Xray HTTPS服务端口"
 msgid "This port needs to be set <code>accept input</code> manually in firewall settings."
 msgstr "此端口需要在系统防火墙<code>accept input</code>中手动设置。"
 
-msgid "Certificate File"
+msgid "[${protocol_name}][tls] Certificate File"
+msgstr "证书"
+
+msgid "[${protocol_name}][xtls] Certificate File"
 msgstr "证书"
 
 msgid "Private Key File"
@@ -436,7 +434,7 @@ msgstr "检查 <code>/var/etc/xray/config.json</code> 以确定入站出站标�
 msgid "https://github.com/yichya/luci-app-xray"
 msgstr "https://github.com/yichya/luci-app-xray"
 
-msgid "Stream Security"
+msgid "[${protocol_name}] Stream Security"
 msgstr "传输安全"
 
 msgid "Server Name"
@@ -445,8 +443,11 @@ msgstr "服务器名"
 msgid "Allow Insecure"
 msgstr "允许不安全"
 
-msgid "Fingerprint"
-msgstr "指纹"
+msgid "[${protocol_name}][tls] Fingerprint"
+msgstr "指纹伪造"
+
+msgid "[${protocol_name}][reality] Fingerprint"
+msgstr "指纹伪造"
 
 msgid "Flow"
 msgstr "流控模式"
