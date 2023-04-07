@@ -434,7 +434,7 @@ msgstr "检查 <code>/var/etc/xray/config.json</code> 以确定入站出站标�
 msgid "https://github.com/yichya/luci-app-xray"
 msgstr "https://github.com/yichya/luci-app-xray"
 
-msgid "[${protocol_name}] Stream Security"
+msgid "Stream Security"
 msgstr "传输安全"
 
 msgid "Server Name"
@@ -443,11 +443,8 @@ msgstr "服务器名"
 msgid "Allow Insecure"
 msgstr "允许不安全"
 
-msgid "[${protocol_name}][tls] Fingerprint"
-msgstr "指纹伪造"
-
-msgid "[${protocol_name}][reality] Fingerprint"
-msgstr "指纹伪造"
+msgid "Fingerprint"
+msgstr "指纹"
 
 msgid "Flow"
 msgstr "流控模式"
