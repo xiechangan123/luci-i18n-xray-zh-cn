@@ -51,4 +51,4 @@ jobs:
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
           asset_path: bin/packages/*/action/*.ipk
-          asset_name: luci-app-xray_${{ github.ref_name }}-openwrt-${{ matrix.version }}.ipk
+          asset_name: luci-app-xray-fw4_${{ github.ref_name }}-openwrt-${{ matrix.version }}.ipk
