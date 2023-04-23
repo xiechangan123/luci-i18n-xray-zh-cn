@@ -45,7 +45,7 @@ msgid "Bittorrent Direct"
 msgstr "BT下载直连"
 
 msgid "If enabled, all bittorrent request won't be forwarded through Xray."
-msgstr "如果启用，则不会通过Xray转发所有BT下载请求。"
+msgstr "如果启用，则不会通过Xray转发BT下载请求。"
 
 msgid "Enable Xray API Service"
 msgstr "启用Xray API服务"
