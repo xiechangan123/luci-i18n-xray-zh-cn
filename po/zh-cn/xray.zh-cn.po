@@ -47,6 +47,21 @@ msgstr "BT下载直连"
 msgid "If enabled, all bittorrent request won't be forwarded through Xray."
 msgstr "如果启用，则不会通过Xray转发BT下载请求。"
 
+msgid "Default Ports Policy"
+msgstr "默认端口策略"
+
+msgid "Forwarded TCP Ports"
+msgstr "TCP转发端口"
+
+msgid "Forwarded UDP Ports"
+msgstr "UDP转发端口"
+
+msgid "Bypassed TCP Ports"
+msgstr "TCP绕过端口"
+
+msgid "Bypassed UDP Ports"
+msgstr "UDP绕过端口"
+
 msgid "Enable Xray API Service"
 msgstr "启用Xray API服务"
 
