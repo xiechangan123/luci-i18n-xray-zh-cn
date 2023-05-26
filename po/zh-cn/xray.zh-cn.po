@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 19:09+0080\n"
-"PO-Revision-Date: 2023-04-21 00:30+0080\n"
+"PO-Revision-Date: 2023-05-27 08:00+0080\n"
 "Last-Translator: xiechangan123\n"
 "Language: zh-cn\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
@@ -45,7 +45,7 @@ msgid "Bittorrent Direct"
 msgstr "BT下载直连"
 
 msgid "If enabled, all bittorrent request won't be forwarded through Xray."
-msgstr "如果启用，则不会通过Xray转发所有BT下载请求。"
+msgstr "如果启用，则不会被Xray转发BT下载请求。"
 
 msgid "Enable Xray API Service"
 msgstr "启用Xray API服务"
@@ -272,7 +272,7 @@ msgid "DNS for resolving known polluted domains (specify forwarded domain rules 
 msgstr "用于解析已知污染的域名（指定域名转发规则）。"
 
 msgid "Forwarded domain rules"
-msgstr "转发域名规则"
+msgstr "域名转发规则"
 
 msgid "Specify rules like <code>geosite:geolocation-!cn</code> or <code>domain:youtube.com</code>. See <a href=\"https://xtls.github.io/config/dns.html#dnsobject\">documentation</a> for details."
 msgstr "指定例如<code>geosite:geolocation-!cn</code>或<code>domain:youtube.com</code>等规则。参阅<a href=\"https://xtls.github.io/config/dns.html#dnsobject\">此处</a>获取帮助。"
@@ -324,7 +324,7 @@ msgid "GeoIP Direct Code List"
 msgstr "GeoIP直连域名列表"
 
 msgid "Hosts in these GeoIP sets will not be forwarded through Xray. Remove all items to forward all non-private hosts."
-msgstr "此GeoIP列表中的域名将不被Xray转发。未设置即为转发所有非私有域名。"
+msgstr "此GeoIP列表中的域名不会被Xray转发。未设置即为转发所有非私有域名。"
 
 msgid ""
 "Resource file /usr/share/xray/geoip.dat not exist. All network traffic will "
@@ -345,16 +345,43 @@ msgid "Bypassed IP"
 msgstr "绕过IP"
 
 msgid "Requests to these IPs won't be forwarded through Xray."
-msgstr "这些IP将不会被Xray代理。"
+msgstr "这些IP不会被Xray转发。"
 
 msgid "Forwarded IP"
 msgstr "转发IP"
+
+msgid "Default Ports Policy"
+msgstr "默认端口策略"
+
+msgid "Forwarded TCP Ports"
+msgstr "TCP转发端口"
+
+msgid "Requests to these TCP Ports will be forwarded through Xray.<br>80, 443, 853 is recommend."
+msgstr "对这些TCP端口的请求会被Xray转发。建议使用80、443、853。"
+
+msgid "Forwarded UDP Ports"
+msgstr "UDP转发端口"
+
+msgid "Requests to these UDP Ports will be forwarded through Xray.<br>53, 443 is recommend."
+msgstr "对这些UDP端口的请求会被Xray转发。建议使用53、443。"
+
+msgid "Bypassed TCP Ports"
+msgstr "TCP绕过端口"
+
+msgid "Requests to these TCP Ports won't be forwarded through Xray."
+msgstr "对这些TCP端口的请求不会被Xray转发。"
+
+msgid "Bypassed UDP Ports"
+msgstr "UDP绕过端口"
+
+msgid "Requests to these UDP Ports won't be forwarded through Xray."
+msgstr "对这些UDP端口的请求不会被Xray转发。"
 
 msgid "Manual Transparent Proxy"
 msgstr "自定义透明代理"
 
 msgid "Compared to iptables REDIRECT, Xray could do NAT46 / NAT64 (for example accessing IPv6 only sites). See <a href=\"https://github.com/v2ray/v2ray-core/issues/2233\">FakeDNS</a> for details."
-msgstr "相比iptables重定向, Xray可以进行NAT46/NAT64（对于某些仅IPv6的网站）。参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233\">FakeDNS</a>获取帮助。"
+msgstr "相比iptables重定向，Xray可以进行NAT46/NAT64（对于某些仅IPv6的网站）。参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233\">FakeDNS</a>获取帮助。"
 
 msgid "Source Address"
 msgstr "源地址"
