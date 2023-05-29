@@ -109,7 +109,7 @@ msgstr "类似于<a href=\"https://xtls.github.io/config/outbound.html#proxysett
 
 msgid ""
 "Configurations here override settings in the previous tabs with the following rules: "
-"<ol><li>Object values will be replaced recursively so settings in previous tabs matters.</li>"
+"<ol><li>Object values will be replaced recursively so settings in previous tabs matter.</li>"
 "<li>Arrays will be replaced entirely instead of being merged.</li>"
 "<li>Tag <code>tag</code> is ignored. </li></ol>Override rules here may be changed later. Use this only for experimental or pre-release features."
 msgstr ""
@@ -356,14 +356,14 @@ msgstr "默认端口策略"
 msgid "Forwarded TCP Ports"
 msgstr "TCP转发端口"
 
-msgid "Requests to these TCP Ports will be forwarded through Xray.<br>80, 443, 853 is recommend."
-msgstr "对这些TCP端口的请求会被Xray转发。建议使用80、443、853。"
+msgid "Requests to these TCP Ports will be forwarded through Xray. Recommended ports: 80, 443, 853"
+msgstr "对这些TCP端口的请求会被Xray转发。建议端口：80、43、853。"
 
 msgid "Forwarded UDP Ports"
 msgstr "UDP转发端口"
 
-msgid "Requests to these UDP Ports will be forwarded through Xray.<br>53, 443 is recommend."
-msgstr "对这些UDP端口的请求会被Xray转发。建议使用53、443。"
+msgid "Requests to these UDP Ports will be forwarded through Xray. Recommended ports: 53, 443"
+msgstr "对这些UDP端口的请求会被Xray转发。建议端口：53、443。"
 
 msgid "Bypassed TCP Ports"
 msgstr "TCP绕过端口"
@@ -582,4 +582,4 @@ msgid "Route Only"
 msgstr "仅路由"
 
 msgid "Use sniffed domain for routing only but still access through IP. Reduces unnecessary DNS requests. See <a href=\"https://github.com/XTLS/Xray-core/commit/a3023e43ef55d4498b1afbc9a7fe7b385138bb1a\">here</a> for help."
-msgstr "仅使用域名嗅探进行路由，但仍通过IP进行访问。减少不必要的 DNS 请求。参阅<a href=\"https://github.com/XTLS/Xray-core/commit/a3023e43ef55d4498b1afbc9a7fe7b385138bb1a\">此处</a>获取帮助。"
+msgstr "仅使用域名嗅探进行路由，但仍通过IP进行访问，减少不必要的 DNS 请求。参阅<a href=\"https://github.com/XTLS/Xray-core/commit/a3023e43ef55d4498b1afbc9a7fe7b385138bb1a\">此处</a>获取帮助。"
