@@ -51,7 +51,7 @@ msgid "Enable Xray API Service"
 msgstr "启用Xray API服务"
 
 msgid "Xray API Service uses port 8080 and GRPC protocol. Also callable via <code>xray api</code> or <code>ubus call xray</code>. See <a href=\"https://xtls.github.io/document/command.html#xray-api\">here</a> for help."
-msgstr "使用8080端口和GRPC协议的Xray API服务。也可通过<code>xray api</code>或<code>ubus call xray</code>调用。参阅<a href=\"https://xtls.github.io/document/command.html#xray-api\">此处</a>获取帮助。"
+msgstr "使用8080端口和GRPC协议的Xray API服务，也可通过<code>xray api</code>或<code>ubus call xray</code>调用。参阅<a href=\"https://xtls.github.io/document/command.html#xray-api\">此处</a>获取帮助。"
 
 msgid "Server List"
 msgstr "服务器列表"
@@ -324,7 +324,7 @@ msgid "GeoIP Direct Code List"
 msgstr "GeoIP直连域名列表"
 
 msgid "Hosts in these GeoIP sets will not be forwarded through Xray. Remove all items to forward all non-private hosts."
-msgstr "此GeoIP列表中的域名不会被Xray转发。未设置即为转发所有非私有域名。"
+msgstr "此GeoIP列表中的域名不会被Xray转发，未设置即为转发所有非私有域名。"
 
 msgid ""
 "Resource file /usr/share/xray/geoip.dat not exist. All network traffic will "
@@ -510,19 +510,25 @@ msgid "Enable Statistics"
 msgstr "启用统计信息"
 
 msgid "Enable statistics of inbounds / outbounds data. Use Xray API to query values."
-msgstr "启用入站/出站数据的统计信息。使用Xray API查询数据。"
+msgstr "启用入站/出站数据的统计信息，使用Xray API查询数据。"
 
 msgid "Enable Observatory"
-msgstr "启用延迟统计"
+msgstr "启用延迟测量"
 
 msgid "Enable latency measurement for TCP and UDP outbounds. Support for balancers and strategy will be added later."
-msgstr "为TCP和UDP出站启用延迟统计。稍后将添加对平衡模式和策略的支持。"
+msgstr "为TCP和UDP出站启用延迟测量，稍后将添加对平衡模式和策略的支持。"
+
+msgid "Enable firewall4 counters"
+msgstr "启用firewall4流量表"
+
+msgid "Add <a href="/cgi-bin/luci/admin/status/nftables">counters to firewall4</a> for transparent proxy rules. (Not supported in all OpenWrt versions. )"
+msgstr "为透明代理规则向firewall4添加流量表。（不支持OpenWrt所有版本）"
 
 msgid "Enable Xray Metrics Server"
 msgstr "启用Xray指标服务"
 
 msgid "Enable built-in metrics server for pprof and expvar. See <a href='https://github.com/XTLS/Xray-core/pull/1000'>here</a> for details."
-msgstr "为pprof和expvar启用内置指标服务。有关详细信息，参阅<a href='https://github.com/XTLS/Xray-core/pull/1000'>此处</a>获取帮助。"
+msgstr "为pprof和expvar启用内置指标服务。参阅<a href='https://github.com/XTLS/Xray-core/pull/1000'>此处</a>获取帮助。"
 
 msgid "Xray Metrics Server Port"
 msgstr "Xray指标服务端口"
@@ -534,37 +540,37 @@ msgid "Handshake Timeout"
 msgstr "握手超时"
 
 msgid "Policy: Handshake timeout when connecting to upstream. See <a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">here</a> for help."
-msgstr "策略：与服务器握手超时时间，参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
+msgstr "策略：与服务器握手超时时间。参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
 
 msgid "Connection Idle Timeout"
 msgstr "空闲等待时间"
 
 msgid "Policy: Close connection if no data is transferred within given timeout. See <a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">here</a> for help."
-msgstr "策略：空闲连接的等待的时间，参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
+msgstr "策略：空闲连接的等待的时间。参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
 
 msgid "Uplink Only Timeout"
 msgstr "等待上行时间"
 
 msgid "Policy: How long to wait before closing connection after server closed connection. See <a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">here</a> for help."
-msgstr "策略：当服务器关闭连接后的等待时间，参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
+msgstr "策略：当服务器关闭连接后的等待时间。参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
 
 msgid "Downlink Only Timeout"
 msgstr "等待下行时间"
 
 msgid "Policy: How long to wait before closing connection after client closed connection. See <a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">here</a> for help."
-msgstr "策略：当客户端关闭连接后的等待时间，参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
+msgstr "策略：当客户端关闭连接后的等待时间。参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
 
 msgid "Buffer Size"
 msgstr "缓冲区大小"
 
 msgid "Policy: Internal cache size per connection. See <a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">here</a> for help."
-msgstr "策略：每个连接的缓存大小，参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
+msgstr "策略：每个连接的缓存大小。参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
 
 msgid "Bridge"
 msgstr "桥接"
 
 msgid "Reverse proxy tool. Currently only client role (bridge) is supported. See <a href=\"https://xtls.github.io/config/reverse.html#bridgeobject\">here</a> for help."
-msgstr "反向代理工具。目前仅支持客户端（桥接）。参阅<a href=\"https://xtls.github.io/config/reverse.html#bridgeobject\">此处</a>获取帮助。"
+msgstr "反向代理工具，目前仅支持客户端（桥接）。参阅<a href=\"https://xtls.github.io/config/reverse.html#bridgeobject\">此处</a>获取帮助。"
 
 msgid "Upstream"
 msgstr "上游服务器"
