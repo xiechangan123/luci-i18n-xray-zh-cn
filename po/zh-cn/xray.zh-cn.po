@@ -522,7 +522,7 @@ msgid "Enable firewall4 counters"
 msgstr "启用firewall4流量表"
 
 msgid "Add <a href="/cgi-bin/luci/admin/status/nftables">counters to firewall4</a> for transparent proxy rules. (Not supported in all OpenWrt versions. )"
-msgstr "为透明代理规则向firewall4添加流量表。（不支持OpenWrt所有版本）"
+msgstr "为透明代理规则向firewall4添加<a href="/cgi-bin/luci/admin/status/nftables">counters to firewall4</a>流量表。（不支持OpenWrt所有版本）"
 
 msgid "Enable Xray Metrics Server"
 msgstr "启用Xray指标服务"
