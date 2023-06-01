@@ -60,7 +60,7 @@ msgid "Xray Servers"
 msgstr "服务器列表"
 
 msgid "Servers are referenced by index (order in the following list). Deleting servers may result in changes of upstream servers actually used by proxy and bridge."
-msgstr "服务器按索引引用（以列表中的顺序）。删除服务器可能会导致代理和桥接使用的上游服务器发生更改。"
+msgstr "服务器按索引引用（以列表中的顺序），删除服务器可能会导致代理和桥接使用的上游服务器发生更改。"
 
 msgid "Alias (optional)"
 msgstr "别名（可选）"
