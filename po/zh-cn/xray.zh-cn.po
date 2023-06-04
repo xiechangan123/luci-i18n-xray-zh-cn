@@ -519,7 +519,7 @@ msgid "Enable latency measurement for TCP and UDP outbounds. Support for balance
 msgstr "为TCP和UDP出站启用延迟测量，稍后将添加对平衡模式和策略的支持。"
 
 msgid "Enable firewall4 counters"
-msgstr "启用firewall4计数器"
+msgstr "启用Firewall4计数器"
 
 msgid "Add <a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a> for transparent proxy rules. (Not supported in all OpenWrt versions. )"
 msgstr "为透明代理规则添加<a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a>计数器。（不支持OpenWrt所有版本）"
