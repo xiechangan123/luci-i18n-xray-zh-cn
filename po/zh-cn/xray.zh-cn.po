@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 19:09+0080\n"
-"PO-Revision-Date: 2023-06-01 13:50+0080\n"
+"PO-Revision-Date: 2023-06-10 12:50+0080\n"
 "Last-Translator: xiechangan123\n"
 "Language: zh-cn\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
@@ -45,7 +45,7 @@ msgid "Bittorrent Direct"
 msgstr "BT下载直连"
 
 msgid "If enabled, all bittorrent request won't be forwarded through Xray."
-msgstr "如果启用，则不会被Xray转发BT下载请求。"
+msgstr "如果启用，BT下载请求不会被Xray转发。"
 
 msgid "Enable Xray API Service"
 msgstr "启用Xray API服务"
@@ -519,7 +519,7 @@ msgid "Enable latency measurement for TCP and UDP outbounds. Support for balance
 msgstr "为TCP和UDP出站启用延迟测量，稍后将添加对平衡模式和策略的支持。"
 
 msgid "Enable firewall4 counters"
-msgstr "启用firewall4计数器"
+msgstr "启用Firewall4计数器"
 
 msgid "Add <a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a> for transparent proxy rules. (Not supported in all OpenWrt versions. )"
 msgstr "为透明代理规则添加<a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a>计数器。（不支持OpenWrt所有版本）"
