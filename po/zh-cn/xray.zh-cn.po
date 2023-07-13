@@ -44,7 +44,7 @@ msgstr "如果启用，DNS请求会按照DNS设置选项中的规则进行转发
 msgid "Bittorrent Direct"
 msgstr "BT下载直连"
 
-msgid "If enabled, all bittorrent request won't be forwarded through Xray."
+msgid "If enabled, no bittorrent request will be forwarded through Xray."
 msgstr "如果启用，BT下载请求不会被Xray转发。"
 
 msgid "Enable Xray API Service"
