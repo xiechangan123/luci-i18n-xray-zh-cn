@@ -363,7 +363,7 @@ msgid "Forwarded TCP Ports"
 msgstr "TCP转发端口"
 
 msgid "Requests to these TCP Ports will be forwarded through Xray. Recommended ports: 80, 443, 853"
-msgstr "对这些TCP端口的请求会被Xray转发。建议端口：80、43、853。"
+msgstr "对这些TCP端口的请求会被Xray转发。建议端口：80、443、853。"
 
 msgid "Forwarded UDP Ports"
 msgstr "UDP转发端口"
