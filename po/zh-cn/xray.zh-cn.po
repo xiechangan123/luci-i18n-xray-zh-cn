@@ -44,7 +44,7 @@ msgstr "如果启用，DNS请求会按照DNS设置选项中的规则进行转发
 msgid "Bittorrent Direct"
 msgstr "BT下载直连"
 
-msgid "If enabled, all bittorrent request won't be forwarded through Xray."
+msgid "If enabled, no bittorrent request will be forwarded through Xray."
 msgstr "如果启用，BT下载请求不会被Xray转发。"
 
 msgid "Enable Xray API Service"
@@ -170,10 +170,10 @@ msgid "Proxy Settings"
 msgstr "代理设置"
 
 msgid "Transparent Proxy Port (TCP)"
-msgstr "透明代理端口（TCP）"
+msgstr "TCP透明代理端口"
 
 msgid "Transparent Proxy Port (UDP)"
-msgstr "透明代理端口（UDP）"
+msgstr "UDP透明代理端口"
 
 msgid "Socks5 Proxy Port"
 msgstr "Socks5代理端口"
@@ -317,6 +317,12 @@ msgstr ""
 "添加资源文件后重新编译固件，或从<a href=\"https://github.com/v2fly/domain-list-community\">"
 "此处</a>下载后上传到路由器。"
 
+msgid "Blocked to loopback"
+msgstr "阻止回环"
+
+msgid "Return <code>127.127.127.127</code> as response for blocked domain rules. If not selected, <code>NXDOMAIN</code> will be returned."
+msgstr "对阻止域名规则返回<code>127.127.127.127</code>，未启用将返回回环地址Loopback Address。"
+
 msgid "Transparent Proxy Rules"
 msgstr "透明代理规则"
 
@@ -357,7 +363,7 @@ msgid "Forwarded TCP Ports"
 msgstr "TCP转发端口"
 
 msgid "Requests to these TCP Ports will be forwarded through Xray. Recommended ports: 80, 443, 853"
-msgstr "对这些TCP端口的请求会被Xray转发。建议端口：80、43、853。"
+msgstr "对这些TCP端口的请求会被Xray转发。建议端口：80、443、853。"
 
 msgid "Forwarded UDP Ports"
 msgstr "UDP转发端口"
@@ -394,6 +400,15 @@ msgstr "目的地址"
 
 msgid "Destination Port"
 msgstr "目的端口"
+
+msgid "Domain names to associate"
+msgstr "关联域名"
+
+msgid "Exempt rebind protection"
+msgstr "豁免重绑定保护"
+
+msgid "Avoid dnsmasq filtering RFC1918 IP addresses (and some TESTNET addresses as well) from result."
+msgstr "避免Dnsmasq过滤RFC1918私有IP地址及某些测试网IP地址。"
 
 msgid "Force Forward"
 msgstr "强制转发"
@@ -522,7 +537,7 @@ msgid "Enable firewall4 counters"
 msgstr "启用Firewall4计数器"
 
 msgid "Add <a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a> for transparent proxy rules. (Not supported in all OpenWrt versions. )"
-msgstr "为透明代理规则添加<a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a>计数器。（不支持OpenWrt所有版本）"
+msgstr "为透明代理规则添加<a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a>计数器（不支持OpenWrt所有版本）。"
 
 msgid "Enable Xray Metrics Server"
 msgstr "启用Xray指标服务"
