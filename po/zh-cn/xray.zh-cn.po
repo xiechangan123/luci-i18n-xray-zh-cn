@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 19:09+0080\n"
-"PO-Revision-Date: 2023-06-10 12:50+0080\n"
+"PO-Revision-Date: 2023-09-28 12:50+0080\n"
 "Last-Translator: xiechangan123\n"
 "Language: zh-cn\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
@@ -23,11 +23,23 @@ msgstr "通用设置"
 msgid "Xray Executable Path"
 msgstr "Xray运行目录"
 
-msgid "TCP Server"
-msgstr "TCP服务器"
+msgid "TCP Server (IPv4)"
+msgstr "TCP服务器（IPv4）"
 
-msgid "UDP Server"
-msgstr "UDP服务器"
+msgid "Select multiple outbound servers to enable load balancing. Select none to disable TCP Outbound."
+msgstr "选择多个出站服务器以启用负载平衡。未设置将禁用TCP出站。"
+
+msgid "UDP Server (IPv4)"
+msgstr "UDP服务器（IPv4）"
+
+msgid "Select multiple outbound servers to enable load balancing. Select none to disable UDP Outbound."
+msgstr "选择多个出站服务器以启用负载平衡。未设置将禁用UDP出站。"
+
+msgid "TCP Server (IPv6)"
+msgstr "TCP服务器（IPv6）"
+
+msgid "UDP Server (IPv6)"
+msgstr "UDP服务器（IPv6）"
 
 msgid "Enable Transparent Proxy"
 msgstr "启用透明代理"
@@ -169,29 +181,41 @@ msgstr "允许空载检查"
 msgid "Proxy Settings"
 msgstr "代理设置"
 
-msgid "Transparent Proxy Port (TCP)"
-msgstr "TCP透明代理端口"
+msgid "Transparent proxy port (TCP4)"
+msgstr "TCP透明代理端口(TCP4)"
 
-msgid "Transparent Proxy Port (UDP)"
-msgstr "UDP透明代理端口"
+msgid "Transparent proxy port (UDP4)"
+msgstr "UDP透明代理端口(UDP4)"
 
-msgid "Socks5 Proxy Port"
+msgid "Transparent proxy port (TCP6)"
+msgstr "TCP透明代理端口(TCP6)"
+
+msgid "Transparent proxy port (UDP6)"
+msgstr "UDP透明代理端口(UDP6)"
+
+msgid "Socks5 proxy port"
 msgstr "Socks5代理端口"
 
-msgid "HTTP Proxy Port"
+msgid "HTTP proxy port"
 msgstr "HTTP代理端口"
 
-msgid "Skip Proxy for uids"
-msgstr "跳过uid代理"
+msgid "Bypass tproxy for uids"
+msgstr "绕过uid透明代理"
 
 msgid "Processes started by users with these uids won't be forwarded through Xray."
 msgstr "使用uid（用户ID）启动的进程不会被Xray转发。"
 
-msgid "Skip Proxy for gids"
-msgstr "跳过gid代理"
+msgid "Bypass tproxy for gids"
+msgstr "绕过gid透明代理"
 
 msgid "Processes started by users in groups with these gids won't be forwarded through Xray."
 msgstr "使用gid（组ID）启动的进程不会被Xray转发。"
+
+msgid "Priority for firewall rules"
+msgstr "防火墙规则优先级"
+
+msgid "See firewall status page for rules Xray used and <a href="https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a> for reference."
+msgstr "查看防火墙状态页以了解Xray使用的规则。参阅<a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a>获取帮助
 
 msgid "Xray DNS Server Port"
 msgstr "DNS端口"
@@ -218,8 +242,44 @@ msgstr "Socket标记号"
 msgid "Avoid proxy loopback problems with local (gateway) traffic"
 msgstr "避免代理流量发送到网关。"
 
-msgid "LAN Interface"
-msgstr "LAN接口"
+msgid "Interfaces for tproxy"
+msgstr "透明代理接口"
+
+msgid "Enable transparent proxy on these interfaces."
+msgstr "在这些接口上启用透明代理"
+
+msgid "WARNING: These features are experimental, may cause a lot of problems and are not guaranteed to be compatible across minor versions."
+msgstr "警告：这些功能是实验性的，可能会导致很多问题，无法保证跨次要版本兼容。"
+
+msgid "Transparent proxy port (TCP4)"
+msgstr "透明代理端口（TCP4）"
+
+msgid "Transparent proxy port (UDP4)"
+msgstr "透明代理端口（UDP4）"
+
+msgid "Transparent proxy port (TCP6)"
+msgstr "透明代理端口（TCP6）"
+
+msgid "Transparent proxy port (UDP6)"
+msgstr "透明代理端口（UDP6）"
+
+msgid "Address Pool (IPv4)"
+msgstr "地址池（IPv4）"
+
+msgid "Address Pool Size (IPv4)"
+msgstr "地址池大小（IPv4）"
+
+msgid "Address Pool (IPv6)"
+msgstr "地址池（IPv6）"
+
+msgid "Address Pool Size (IPv6)"
+msgstr "地址池大小（IPv6）"
+
+msgid "FakeDNS Routing"
+msgstr "FakeDNS路由"
+
+msgid "See <a href="https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
+msgstr "参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a>获取帮助。"
 
 msgid "LAN Hosts Access Control"
 msgstr "LAN主机访问控制"
@@ -321,16 +381,19 @@ msgid "Blocked to loopback"
 msgstr "阻止回环"
 
 msgid "Return <code>127.127.127.127</code> as response for blocked domain rules. If not selected, <code>NXDOMAIN</code> will be returned."
-msgstr "对阻止域名规则返回<code>127.127.127.127</code>，未启用将返回回环地址Loopback Address。"
+msgstr "对阻止域名规则返回<code>127.127.127.127</code>，未设置将返回回环地址Loopback Address。"
 
 msgid "Transparent Proxy Rules"
 msgstr "透明代理规则"
 
-msgid "GeoIP Direct Code List"
-msgstr "GeoIP直连域名列表"
+msgid "GeoIP Direct Code List (IPv4)"
+msgstr "GeoIP直连域名列表（IPv4）"
 
 msgid "Hosts in these GeoIP sets will not be forwarded through Xray. Remove all items to forward all non-private hosts."
 msgstr "此GeoIP列表中的域名不会被Xray转发，未设置即为转发所有非私有域名。"
+
+msgid "GeoIP Direct Code List (IPv6)"
+msgstr "GeoIP直连域名列表（IPv6）"
 
 msgid ""
 "Resource file /usr/share/xray/geoip.dat not exist. All network traffic will "
@@ -355,6 +418,9 @@ msgstr "这些IP不会被Xray转发。"
 
 msgid "Forwarded IP"
 msgstr "转发IP"
+
+msgid "Requests to these IPs will always be handled by Xray (but still might be bypassed by Xray itself, like private addresses).<br/>Useful for some really strange network. If you really need to forward private addresses, try Manual Transparent Proxy below."
+msgstr "这些IP始终由Xray转发（私有地址可能会被Xray绕过）。<br/>对一些奇怪的网络有用。确需转发私人地址，尝试下面的手动透明代理。"
 
 msgid "Default Ports Policy"
 msgstr "默认端口策略"
@@ -494,11 +560,8 @@ msgstr "[与主服务相同]"
 msgid "WARNING: at least one of asset files (geoip.dat, geosite.dat) is not found under /usr/share/xray. Xray may not work properly. See <a href=\"https://github.com/yichya/luci-app-xray\">here</a> for help."
 msgstr "警告：/usr/share/xray目录下至少一个资源文件（geoip.dat, geosite.dat）不存在。Xray可能无法正常工作。参阅<a href=\"https://github.com/yichya/luci-app-xray\">此处</a>报告问题或提出请求。"
 
-msgid "Asset files check: geoip.dat:"
-msgstr "资源检查：geoip："
-
-msgid "MB; geosite.dat:"
-msgstr "MB，geosite："
+msgid "Asset files check: "
+msgstr "资源检查："
 
 msgid "Report issues or request for features <a href=\"https://github.com/yichya/luci-app-xray\">here</a>."
 msgstr "<a href=\"https://github.com/yichya/luci-app-xray\">此处</a>报告问题或提出请求。"
@@ -537,7 +600,7 @@ msgid "Enable firewall4 counters"
 msgstr "启用Firewall4计数器"
 
 msgid "Add <a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a> for transparent proxy rules. (Not supported in all OpenWrt versions. )"
-msgstr "为透明代理规则添加<a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a>计数器（不支持OpenWrt所有版本）。"
+msgstr "为透明代理规则添加<a href=\"/cgi-bin/luci/admin/status/nftables\">counters to firewall4</a>（不支持OpenWrt所有版本）。"
 
 msgid "Enable Xray Metrics Server"
 msgstr "启用Xray指标服务"
