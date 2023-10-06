@@ -476,8 +476,17 @@ msgstr "豁免重绑定保护"
 msgid "Avoid dnsmasq filtering RFC1918 IP addresses (and some TESTNET addresses as well) from result."
 msgstr "避免Dnsmasq过滤RFC1918私有IP地址及某些测试网IP地址。"
 
-msgid "Force Forward"
-msgstr "强制转发"
+msgid "Force Forward (TCP)"
+msgstr "强制转发（TCP）"
+
+msgid "Force Forward server (TCP)"
+msgstr "强制转发服务器（TCP）"
+
+msgid "Force Forward (UDP)"
+msgstr "强制转发（UDP）"
+
+msgid "Force Forward server (UDP)"
+msgstr "强制转发服务器（UDP）"
 
 msgid "This destination must be forwarded through an outbound server."
 msgstr "此目标必须通过出站服务器转发。"
