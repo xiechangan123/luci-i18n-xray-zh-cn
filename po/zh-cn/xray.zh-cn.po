@@ -214,7 +214,7 @@ msgstr "使用gid（组ID）启动的进程不会被Xray转发。"
 msgid "Priority for firewall rules"
 msgstr "防火墙规则优先级"
 
-msgid "See firewall status page for rules Xray used and <a href="https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a> for reference."
+msgid "See firewall status page for rules Xray used and <a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a> for reference."
 msgstr "查看防火墙状态页以了解Xray使用的规则。参阅<a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a>获取帮助。"
 
 msgid "Xray DNS Server Port"
@@ -232,7 +232,7 @@ msgid ""
 "extra ports, 5300 - 5303 will be used for DNS requests.<br/>Increasing this "
 "value may help reduce the possibility of temporary DNS lookup failures."
 msgstr ""
-"在多个端口上侦听DNS请求（所有端口都用作dnsmasq上游服务器）。"
+"在多个端口上监听DNS请求（所有端口都用作dnsmasq上游服务器）。"
 "</br>例如Xray DNS服务器端口为5300并使用3个额外端口，则5300-5303将用于DNS请求。"
 "</br>添加额外端口可能有助于减少临时DNS查找失败的可能性。"
 
@@ -278,20 +278,47 @@ msgstr "地址池大小（IPv6）"
 msgid "FakeDNS Routing"
 msgstr "FakeDNS路由"
 
-msgid "See <a href="https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
+msgid "See <a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
 msgstr "参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a>获取帮助。"
+
+msgid "Extra Inbounds"
+msgstr "额外入站Inbounds"
+
+msgid "Add more socks5 / http inbounds and redirect to other outbounds."
+msgstr "添加更多socks5 / http入站Inbounds并重定向到其他出站Outbounds。"
+
+msgid "Listen Address"
+msgstr "监听地址"
+
+msgid "Inbound Type"
+msgstr "入站Inbound类型"
 
 msgid "LAN Hosts Access Control"
 msgstr "LAN主机访问控制"
 
-msgid "Will not enable transparent proxy for these MAC addresses."
-msgstr "不会为这些MAC地址透明代理。"
+msgid "Override global transparent proxy settings here."
+msgstr "覆盖全局透明代理设置。"
 
 msgid "MAC Address"
 msgstr "MAC地址"
 
-msgid "Access Control Strategy"
-msgstr "访问控制策略"
+msgid "Extra inbound (TCP4)"
+msgstr "额外入站Inbounds（TCP4）"
+
+msgid "Extra inbound (UDP4)"
+msgstr "额外入站Inbounds（UDP4）"
+
+msgid "Extra inbound (TCP6)"
+msgstr "额外入站Inbounds（TCP6）"
+
+msgid "Extra inbound (UDP6)"
+msgstr "额外入站Inbounds（UDP6）"
+
+msgid "Access Control Strategy (IPv4)"
+msgstr "访问控制策略（IPv4）"
+
+msgid "Access Control Strategy (IPv6)"
+msgstr "访问控制策略（IPv6）"
 
 msgid "Bypass Transparent Proxy"
 msgstr "绕过透明代理"
