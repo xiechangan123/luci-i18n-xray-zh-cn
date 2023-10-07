@@ -27,13 +27,13 @@ msgid "TCP Server (IPv4)"
 msgstr "TCP服务器（IPv4）"
 
 msgid "Select multiple outbound servers to enable load balancing. Select none to disable TCP Outbound."
-msgstr "选择多个出站服务器以启用负载平衡。未设置将禁用TCP出站。"
+msgstr "选择多个出站服务器以启用负载平衡，未设置将禁用TCP出站。"
 
 msgid "UDP Server (IPv4)"
 msgstr "UDP服务器（IPv4）"
 
 msgid "Select multiple outbound servers to enable load balancing. Select none to disable UDP Outbound."
-msgstr "选择多个出站服务器以启用负载平衡。未设置将禁用UDP出站。"
+msgstr "选择多个出站服务器以启用负载平衡，未设置将禁用UDP出站。"
 
 msgid "TCP Server (IPv6)"
 msgstr "TCP服务器（IPv6）"
@@ -214,8 +214,8 @@ msgstr "使用gid（组ID）启动的进程不会被Xray转发。"
 msgid "Priority for firewall rules"
 msgstr "防火墙规则优先级"
 
-msgid "See firewall status page for rules Xray used and <a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a> for reference."
-msgstr "查看防火墙状态页以了解Xray使用的规则。参阅<a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a>获取帮助
+msgid "See firewall status page for rules Xray used and <a href="https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a> for reference."
+msgstr "查看防火墙状态页以了解Xray使用的规则。参阅<a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a>获取帮助。"
 
 msgid "Xray DNS Server Port"
 msgstr "DNS端口"
@@ -278,7 +278,7 @@ msgstr "地址池大小（IPv6）"
 msgid "FakeDNS Routing"
 msgstr "FakeDNS路由"
 
-msgid "See <a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
+msgid "See <a href="https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
 msgstr "参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a>获取帮助。"
 
 msgid "LAN Hosts Access Control"
@@ -462,10 +462,10 @@ msgid "Source Port"
 msgstr "源端口"
 
 msgid "Destination Address"
-msgstr "目的地址"
+msgstr "目标地址"
 
 msgid "Destination Port"
-msgstr "目的端口"
+msgstr "目标端口"
 
 msgid "Domain names to associate"
 msgstr "关联域名"
