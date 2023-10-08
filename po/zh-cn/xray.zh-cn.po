@@ -282,7 +282,7 @@ msgid "See <a href=\"https://github.com/v2ray/v2ray-core/issues/2233\">FakeDNS</
 msgstr "参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233\">FakeDNS</a>获取帮助。"
 
 msgid "Add more socks5 / http inbounds and redirect to other outbounds."
-msgstr "添加更多socks5 / http入站Inbounds并重定向到其他出站Outbounds。"
+msgstr "添加更多socks5/http入站Inbounds并重定向到其他出站Outbounds。"
 
 msgid "Listen Address"
 msgstr "监听地址"
@@ -360,7 +360,7 @@ msgid "Override IPv6 Hop Limit"
 msgstr "覆盖IPv6 Hop Limit"
 
 msgid "TTL / Hop Limit Match"
-msgstr ""TTL/Hop Limit匹配"
+msgstr "TTL/Hop Limit匹配"
 
 msgid "Only override TTL / hop limit for packets with specific TTL / hop limit."
 msgstr "仅覆盖特定TTL/hop limit数据包的TTL/hop limit。"
