@@ -278,7 +278,7 @@ msgstr "地址池大小（IPv6）"
 msgid "FakeDNS Routing"
 msgstr "FakeDNS路由"
 
-msgid "See <a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
+msgid "See <a href="https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
 msgstr "参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a>获取帮助。"
 
 msgid "Extra Inbounds"
@@ -660,7 +660,7 @@ msgid "Connection Idle Timeout"
 msgstr "空闲等待时间"
 
 msgid "Policy: Close connection if no data is transferred within given timeout. See <a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">here</a> for help."
-msgstr "策略：空闲连接的等待的时间。参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
+msgstr "策略：在给定时间内未传输任何数据，则关闭连接。参阅<a href=\"https://xtls.github.io/config/policy.html#levelpolicyobject\">此处</a>获取帮助。"
 
 msgid "Uplink Only Timeout"
 msgstr "等待上行时间"
