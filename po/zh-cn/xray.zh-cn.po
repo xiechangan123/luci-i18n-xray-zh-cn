@@ -330,7 +330,7 @@ msgid "Enable for IPv4 UDP"
 msgstr "启用IPv4 UDP"
 
 msgid "This may cause problems but worth a try."
-msgstr "可能会出问题，值得一试。"
+msgstr "可能会出问题，但值得一试。"
 
 msgid "Enable for IPv6 TCP"
 msgstr "启用IPv6 TCP"
