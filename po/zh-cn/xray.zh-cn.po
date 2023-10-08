@@ -215,7 +215,7 @@ msgid "Priority for firewall rules"
 msgstr "防火墙规则优先级"
 
 msgid "See firewall status page for rules Xray used and <a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a> for reference."
-msgstr "查看防火墙状态页以了解Xray使用的规则。参阅<a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook">Netfilter Internal Priority</a>获取帮助。"
+msgstr "查看防火墙状态页以了解Xray使用的规则。参阅<a href=\"https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks#Priority_within_hook\">Netfilter Internal Priority</a>获取帮助。"
 
 msgid "Xray DNS Server Port"
 msgstr "DNS端口"
@@ -279,7 +279,7 @@ msgid "FakeDNS Routing"
 msgstr "FakeDNS路由"
 
 msgid "See <a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a> for details."
-msgstr "参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233">FakeDNS</a>获取帮助。"
+msgstr "参阅<a href=\"https://github.com/v2ray/v2ray-core/issues/2233\">FakeDNS</a>获取帮助。"
 
 msgid "Add more socks5 / http inbounds and redirect to other outbounds."
 msgstr "添加更多socks5 / http入站Inbounds并重定向到其他出站Outbounds。"
@@ -311,11 +311,59 @@ msgstr "额外Inbounds（TCP6）"
 msgid "Extra inbound (UDP6)"
 msgstr "额外Inbounds（UDP6）"
 
+msgid "Dynamic Direct"
+msgstr "动态直连"
+
 msgid "Access Control Strategy (IPv4)"
 msgstr "访问控制策略（IPv4）"
 
 msgid "Access Control Strategy (IPv6)"
 msgstr "访问控制策略（IPv6）"
+
+msgid "Enable for IPv4 TCP"
+msgstr "启用IPv4 TCP"
+
+msgid "This should improve performance with large number of connections."
+msgstr "应该可以提高大量连接的性能。"
+
+msgid "Enable for IPv4 UDP"
+msgstr "启用IPv4 UDP"
+
+msgid "This may cause problems but worth a try."
+msgstr "可能会出问题，值得一试。"
+
+msgid "Enable for IPv6 TCP"
+msgstr "启用IPv6 TCP"
+
+msgid "This may not be very useful but it should be good enough for a try."
+msgstr "可能不是很有用，但应该足够好，值得一试。"
+
+msgid "Enable for IPv6 UDP"
+msgstr "启用IPv6 UDP"
+
+msgid "This may cause problems and is not very useful at the same time. Not recommended."
+msgstr "可能会出问题，同时不是很有用，不推荐。"
+
+msgid "Dynamic Direct Timeout"
+msgstr "动态直连超时"
+
+msgid "Larger value consumes more memory and performs generally better. Unit in seconds."
+msgstr "值越大，消耗的内存越多，性能通常越好，以秒为单位。"
+
+msgid "Override IPv4 TTL"
+msgstr "覆盖IPv4 TTL"
+
+msgid "Strongly not recommended. Only used for some network environments with specific restrictions."
+msgstr "强烈不推荐，仅用于某些特殊限制的网络环境。"
+
+msgid "Override IPv6 Hop Limit"
+msgstr "覆盖IPv6 Hop Limit"
+
+msgid "TTL / Hop Limit Match"
+msgstr ""TTL/Hop Limit匹配"
+
+msgid "Only override TTL / hop limit for packets with specific TTL / hop limit."
+msgstr "仅覆盖特定TTL/hop limit数据包的TTL/hop limit。"
 
 msgid "Bypass Transparent Proxy"
 msgstr "绕过透明代理"
@@ -444,7 +492,7 @@ msgid "Forwarded IP"
 msgstr "转发IP"
 
 msgid "Requests to these IPs will always be handled by Xray (but still might be bypassed by Xray itself, like private addresses).<br/>Useful for some really strange network. If you really need to forward private addresses, try Manual Transparent Proxy below."
-msgstr "这些IP始终由Xray转发（私有地址可能会被Xray绕过）。<br/>对一些奇怪的网络有用。确需转发私人地址，尝试下面的手动透明代理。"
+msgstr "这些IP始终由Xray转发（私有地址可能会被Xray绕过）。<br/>对一些奇怪的网络有用，确需转发私人地址，尝试下面的手动透明代理。"
 
 msgid "Default Ports Policy"
 msgstr "默认端口策略"
