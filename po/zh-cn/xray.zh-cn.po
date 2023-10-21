@@ -299,7 +299,7 @@ msgstr "启用IPv4透明代理的设备"
 msgid "Enable IPv4 transparent proxy on these interfaces / network devices."
 msgstr "在这些接口/网络设备上启用IPv4透明代理。"
 
-msgid "Devices to enable IPv6 tproxy"
+msgid "Devices to enable IPV6 tproxy"
 msgstr "启用IPv6透明代理的设备"
 
 msgid "Enable IPv6 transparent proxy on these interfaces / network devices."
