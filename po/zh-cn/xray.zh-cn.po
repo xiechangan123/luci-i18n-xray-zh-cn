@@ -309,13 +309,13 @@ msgid "Devices to disable IPv4 tproxy"
 msgstr "禁用IPv4透明代理的设备"
 
 msgid "This overrides per-device settings below. FakeDNS and manual transparent proxy won't be affected by this option."
-msgstr "这将覆盖下面的每个设备的设置，FakeDNS和手动透明代理不会受到此选项的影响。"
+msgstr "这将覆盖下面的设备设置，FakeDNS和手动透明代理不会受到此选项的影响。"
 
 msgid "Devices to disable IPv6 tproxy"
 msgstr "禁用IPv6透明代理的设备"
 
 msgid "Per-device settings here override per-interface enabling settings above. FakeDNS and manual transparent proxy won't be affected by these options."
-msgstr "此处的设备设置将覆盖上述按接口启用设置，FakeDNS和手动透明代理不会受到这些选项的影响。"
+msgstr "此处的设备设置将覆盖上述已启用接口设置，FakeDNS和手动透明代理不会受到这些选项的影响。"
 
 msgid "MAC Address"
 msgstr "MAC地址"
