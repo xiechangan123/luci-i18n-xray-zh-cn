@@ -659,9 +659,6 @@ msgstr "发送代理协议版本"
 msgid "Custom Options"
 msgstr "自定义选项"
 
-msgid "Custom Configuration Hook"
-msgstr "自定义配置钩子"
-
 msgid "Read <a href="https://ucode.mein.io/">ucode Documentation</a> for the language used. Code filled here may need to change after upgrading luci-app-xray."
 msgstr "参阅<a href=\"https://ucode.mein.io/">ucode Documentation</a>获取帮助，升级luci-app-xray后，此处填写的代码可能需要更改"
 
